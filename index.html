@@ -1,266 +1,329 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>TEST</title>
-	<!-- Tell the browser to be responsive to screen width -->
-	<meta content="width=device-width, initial-scale=1.0,"name="viewport">
-	<!-- jQuery 3 -->
-	
-	<!-- CSS -->
-	<link rel="stylesheet"  href="style.css">
-	<!-- Javascript -->
-	<script src="main.js" defer></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRS操作デモ トップ</title>
+
+<style>
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+margin:0;
+padding:0;
+border:0;
+outline:0;
+font-size:100%;
+/* 行の中でのテキストや画像などの縦方向の揃え位置を指定 */
+vertical-align:baseline;    /* 親要素のベースラインに揃える */
+/* 背景に関する指定をまとめて行う */
+background:transparent;     /* 背景を透明に設定 */
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+    }
+
+body {
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji",
+        "Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+    font-family: inherit;
+}
+
+.inner {
+    position: relative;
+    width: 1110px;
+    margin: 0 auto;
+}
+header {
+    height: 100px;
+    text-align: right;
+}
+header h1 {
+    position: absolute;
+    top: 7px;
+}
+header h1 img {
+    top: 150px;
+    width: 280px;
+}
+header ul {
+    display: inline-block;
+    padding: 20px 0;
+    list-style: none;
+}
+header ul li {
+    display: inline-block;
+    color: #6C757D;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 1.3;
+}
+header ul li :first-child {
+    margin-right: 20px;
+}
+header ul li h2 {
+    font-size: 15px;
+    font-weight: normal;
+}
+header ul li p {
+    font-size: 32px;
+    font-weight: bold;
+}
+header ul li a {
+    display: inline-block;
+    height: 48px;
+    padding: 0 15px;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    line-height: 48px;
+    background: #6c757d;
+}
+nav {
+    background: #343A40;
+    text-align: center;
+}
+nav ul {
+    width: 1000px;
+    margin: 0 auto;
+}
+nav ul li {
+    display: inline-block;
+}
+nav ul li a {
+    height: 70px;
+    padding: 0 35px;
+    line-height: 70px;
+    color: rgba(255, 255, 255, 5);
+    font-size: 20px;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    color: rgba(255, 255, 255, .75);
+}
+.key_visual {
+    position: relative;
+    height: 780px;
+    width: 1300px;
+    margin: auto;
+    background-image: url(img/mainPC.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: right;
+}
+.key_visual_content {
+    position: relative;
+    top: 25%;
+    left: -33%;
+    display: inline-block;
+    width: 250px;
+    height: 150px;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, .125);
+    /* 角を丸くする */
+    border-radius: 20px;
+    background-color: #f48c04;
+    box-sizing: border-box;
+    box-shadow: 3px 3px 7px rgb(0,0,0,30);
+}
+.key_visual_content ul {
+    font-size: 28px;
+    text-align: center;
+    padding:50px 0;
+}
+.key_visual_content ul li {
+    display: inline-block;
+}
+.key_visual_content ul li a {
+    display: inline-block;
+    height: 55px;
+    padding: 0 35px;
+    line-height: 55px;
+    color: rgba(255, 255, 255, 255);
+    text-decoration: none;
+}
+
+.key_visual_content2 {
+    position: relative;
+    top: 25%;
+    left: -30%;
+    display: inline-block;
+    width: 250px;
+    height: 150px;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, .125);
+    /* 角を丸くする */
+    border-radius: 20px;
+    background-color: #f48c04;
+    box-sizing: border-box;
+    box-shadow: 3px 3px 7px rgb(0,0,0,30);
+}
+.key_visual_content2 ul {
+    font-size: 28px;
+    text-align: center;
+    padding:50px 0;
+}
+.key_visual_content2 ul li {
+    display: inline-block;
+}
+.key_visual_content2 ul li a {
+    display: inline-block;
+    height: 55px;
+    padding: 0 35px;
+    line-height: 55px;
+    color: rgba(255, 255, 255, 255);
+    text-decoration: none;
+}
+
+.notice {
+    font-size: 13px;
+}
+</style>
 
 </head>
-
 <body>
-	<header>
-		<div class="headline">
-			<h1>
-				<img src="img/logo.png" alt="ロゴ画像">
-			</h1>
 
-			<ul>
-				<!-- li=リストの項目を表示するために使用するタグ -->
-				<li>
-					<a href="index.html">戻る</a>
-				</li>
-			</ul>
-		</div>
-	</header>
+<header>
+    <!-- div=ブロックレベル要素としてグループ化することができるタグ -->
+    <div class="inner">
+        <!-- h1=Webページにおいて最上位の見出しを記述するタグ -->
+        <h1>
+            <!-- a=リンクの出発点や到達点を指定するタグ -->
+            <!-- a href=領域をクリックした際のリンク先を指定 -->
+            <a href="/">
+                <!-- img=文書内に画像を表示するためのタグ -->
+                <!-- img src=表示する画像ファイルを指定する -->
+                <img src="img/template-logo01.png" alt="ロゴ画像">
+            </a>
+        </h1>
+        <!-- ul=箇条書きのリストを表示する際に使用するタグ -->
+        <ul>
+            <!-- li=リストの項目を表示するために使用するタグ -->
+            <li>
+                <!-- h1=Webページにおいてh1の次の見出しを記述するタグ -->
+                <h2>お電話でのご予約はこちら</h2>
+                <!-- p=段落を指定するためのタグ -->
+                <p>03-1234-5678</p>
+            </li>
 
-	<!-- 表示エリア -->
-	<div class="back">
-		<!-- 操作エリア -->
-		<div class ="operationbox">
-			<span class="box-title">メニュー</span>
-			<div class="btn" id="start">start</div>
-			<div class="btn_display" id=btn_display>配線例</div>
-			<div class="btn_application" id="btn_application">アプリケーション例</div>
-			<div class="btn_option" id="btn_option">オプション</div>		
-		</div>
+            <li>
+                <a href="#">WEB予約</a>
+            </li>
+        </ul>
+    </div>
+</header>
 
-		<!-- 配線例 -->
-		<div class="disp_list" id="disp_list">
-			<h2>
-				配線例を見たいときは機器の画像に
-				<br>カーソルを併せてください
-			</h2>
-			<!-- マグネット配線例画像 -->
-			<div class="magnet_live">
-				<img src="/img/magnet_live.png">
-			</div>
-			<!-- 漏電遮断器配線例画像 -->
-			<div class="breaker_live">
-				<img src="/img/breaker_live.png">
-			</div>
-			<!-- アース配線例画像 -->
-			<div class="earth_live">
-				<img src="/img/earth_live.png">
-			</div>
-		</div>
+<nav>
+    <ul>
+        <li><a href="constitution.html">竹中電機HP</a></li>
+        <li><a href="#">MENU</a></li>
+    </ul>
+</nav>
 
-		<!-- アプリケーション例 -->
-		<div class="application_list" id="application_list">
-			<h2>
-				アプリケーション例
-			</h2>
-			<div class="cncmachine">
-				<p>工作機械</p>
-				<img src="/img/Application/cncmachine.png">
-			</div>
-			<div class="pressmachine">
-				<p>プレス機</p>
-				<img src="/img/Application/pressmachine.png">
-			</div>
-			<div class="robot">
-				<p>ロボット</p>
-				<img src="/img/Application/robot.png">
-			</div>
-			<div class="compressor">
-				<p>コンプレッサー</p>
-				<img src="/img/Application/compressor.png">
-			</div>
-			<div class="pump">
-				<p>ポンプ</p>
-				<img src="/img/Application/pump.png">
-			</div>
-			<div class="autodoor">
-				<p>自動ドア</p>
-				<img src="/img/Application/autodoor.png">
-			</div>
-			<div class="blowermotor">
-				<p>ブロアモーター</p>
-				<img src="/img/Application/blowermotor.png">
-			</div>
-			<div class="crane">
-				<p>コンテナクレーン</p>
-				<img src="/img/Application/crane.png">
-			</div>
-			<div class="mixer">
-				<p>撹拌機</p>
-				<img src="/img/Application/mixer.png">
-			</div>
-			<div class="washingmachine">
-				<p>洗浄機</p>
-				<img src="/img/Application/washingmachine.png">
-			</div>
-		</div>
-
-		<!-- オプション -->
-		<div class="option_list" id="option_list">
-			<h2>
-				表示器を使用したシステム構成図
-			</h2>
-			<div class="balloon">
-				表示器を使用することで<br>
-				IRS9000シリーズ最大16台を一括監視
-			</div>
-			<div class="touchpanel">
-				<p>表示器(竹中電機専用ソフトインストール)</p>
-				<img src="/img/System/display.png">
-			</div>
-			<div class="controlpanel1">
-				<p>制御盤</p>
-				<img src="/img/System/controlpanel.png">
-			</div>
-			<div class="IRS1">
-				<p>IRS9000シリーズ</p>
-				<img src="/img/System/IRS.png">
-			</div>
-			<div class="controlpanel2">
-				<p>制御盤</p>
-				<img src="/img/System/controlpanel.png">
-			</div>
-			<div class="IRS2">
-				<p>IRS9000シリーズ</p>
-				<img src="/img/System/IRS.png">
-			</div>
-			<div class="comment1">
-				IRS9000シリーズ<br>最大16台接続可能
-			</div>
-			<div class="controlpanel3">
-				<p>制御盤</p>
-				<img src="/img/System/controlpanel.png">
-			</div>
-			<div class="IRS3">
-				<p>IRS9000シリーズ</p>
-				<img src="/img/System/IRS.png">
-			</div>
-			<div class="controlpanel4">
-				<p>制御盤</p>
-				<img src="/img/System/controlpanel.png">
-			</div>
-			<div class="IRS4">
-				<p>IRS9000シリーズ</p>
-				<img src="/img/System/IRS.png">
-			</div>
-		</div>
-
-		<!-- 運転準備ランプON時画像 -->
-		<div class="operation">
-			<p>運転準備 ON</p>
-			<img src="/img/operation.png">
-		</div>
-		<!-- 運転準備ランプOFF時画像 -->
-		<div class="operation_off">
-			<p>運転準備 OFF</p>
-			<img src="/img/operation_off.png">
-		</div>
-		<!-- 制御盤画像 -->
-		<div class="control_panel">
-			<p>制御盤</p>
-			<img src="/img/control_panel.png" alt="制御盤">
-		</div>
-		<!-- 制御盤とマグネット接続線 -->
-		<div class="c_line_fix1"></div>
-		<div class="c_line_fix2"></div>
-		<!-- マグネット画像1 -->
-		<div class="magnet1">
-			<p>マグネット</p>
-			<img src="/img/magnet.png">
-		</div>
-		
-		<!-- マグネットと漏電遮断器接続線 -->
-		<div class="m_line1_fix"></div>
-
-		<!-- 漏電遮断器1画像 -->
-		<div class="breaker">
-			<p>漏電遮断機</p>
-			<img src="/img/breaker.png">
-		</div>
-		
-		<!-- 漏電遮断器1とモーター1接続線 -->
-		<div class="b_line1_fix"></div>
-		<!-- 漏電遮断器1とIRS接続線 -->
-		<div class="round1"></div>
-		<div class="i_line1_fix1"></div>
-		<div class="i_line1_fix2"></div>
-		<!-- モーター1劣化前画像 -->
-		<div class="motor1_start">
-			<p>モーター 新品</p>
-			<img src="/img/gf.png" alt="動くモーター">
-		</div>
-		<!-- モーター1劣化後画像 -->
-		<div class="motor1_finish">
-			<p>モーター 劣化</p>
-			<img src="/img/gf_after.png" >
-		</div>
-		
-		<!-- モーター1とアース接続線 -->
-		<div class="e_line1_fix1"></div>
-		<div class="e_line1_fix2"></div>
-		<div class="e_line1_fix3"></div>
-		<div class="e_line1_fix4"></div>
-		<!-- IRS測定前画像 -->
-		<div class="IRS_start">
-			<img src="/img/IRS_start.png">
-		</div>
-		<!-- IRS測定後画像 -->
-		<div class="IRS_finish">
-			<img src="/img/IRS_finish.png" >
-		</div>
-		<!-- IRSとアース接続線 -->
-		<div class="e_line2_fix1"></div>
-		<div class="e_line2_fix2"></div>
-		<div class="e_line2_fix3"></div>
-		<div class="e_line2_fix4"></div>
-
-		<div class="display_start">
-			<!-- タッチパネル測定前 -->
-			<img src="/img/Display_start.png">
-		</div>
-		<div class="display_finish">
-			<!-- タッチパネル測定後 -->
-			<img src="/img/Display_finish.png">
-		</div>
-		<div class="display">
-			<!-- タッチパネル実物 -->
-			<img src="/img/Display.png" >
-		</div>
-
-		<div class="PC_start">
-			<!-- 集中管理システム測定前 -->
-			<img src="/img/PC_start.png">
-		</div>
-		<div class="PC_finish">
-			<!-- 集中管理システム測定前 -->
-			<img src="/img/PC_finish.png">
-		</div>
-		<!-- IRSと異常ランプ接続線 -->
-		
-		<div class="abnormal_lamp">
-			<!-- 異常ランプON時 -->
-			<img src="/img/operation.png">
-		</div>
-		<div class="abnormal_lamp_off">
-			<!-- 異常ランプOFF時 -->
-			<img src="/img/operation_off.png">
-		</div>
-		<div class="a_line_fix1"></div>
-
-	</div>
+<div class="key_visual">
+    <div class="key_visual_content">
+        <ul>
+            <li><a href="demo.html">IRS操作デモ</a></li>
+        </ul>
+    </div>
+    <div class="key_visual_content2">
+        <ul>
+            <li><a href="constitution.html">構成・配線例</a></li>
+        </ul>
+    </div>
+</div>
 
 </body>
 </html>
