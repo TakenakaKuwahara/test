@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>TEST</title>
+	<!-- Tell the browser to be responsive to screen width -->
+	<meta content="width=device-width, initial-scale=1.0,"name="viewport">
+	<!-- jQuery 3 -->
+	
+	<!-- CSS -->
+	<link rel="stylesheet"  href="style.css">
+	<!-- Javascript -->
+	<script src="main.js" defer></script>
+
+</head>
+
+<body>
+	<header>
+		<div class="headline">
+			<h1>
+				<img src="img/logo.png" alt="ロゴ画像">
+			</h1>
+
+			<ul>
+				<!-- li=リストの項目を表示するために使用するタグ -->
+				<li>
+					<a href="index.html">戻る</a>
+				</li>
+			</ul>
+		</div>
+	</header>
+
+	<!-- 表示エリア -->
+	<div class="back">
+		<!-- 操作エリア -->
+		<div class ="operationbox">
+			<span class="box-title">メニュー</span>
+			<div class="btn" id="start">start</div>
+			<div class="btn_display" id=btn_display>配線例</div>
+			<div class="btn_application" id="btn_application">アプリケーション例</div>
+			<div class="btn_option" id="btn_option">オプション</div>		
+		</div>
+
+		<!-- 配線例 -->
+		<div class="disp_list" id="disp_list">
+			<h2>
+				配線例を見たいときは機器の画像に
+				<br>カーソルを併せてください
+			</h2>
+			<!-- マグネット配線例画像 -->
+			<div class="magnet_live">
+				<img src="/img/magnet_live.png">
+			</div>
+			<!-- 漏電遮断器配線例画像 -->
+			<div class="breaker_live">
+				<img src="/img/breaker_live.png">
+			</div>
+			<!-- アース配線例画像 -->
+			<div class="earth_live">
+				<img src="/img/earth_live.png">
+			</div>
+		</div>
+
+		<!-- アプリケーション例 -->
+		<div class="application_list" id="application_list">
+			<h2>
+				アプリケーション例
+			</h2>
+			<div class="cncmachine">
+				<p>工作機械</p>
+				<img src="/img/Application/cncmachine.png">
+			</div>
+			<div class="pressmachine">
+				<p>プレス機</p>
+				<img src="/img/Application/pressmachine.png">
+			</div>
+			<div class="robot">
+				<p>ロボット</p>
+				<img src="/img/Application/robot.png">
+			</div>
+			<div class="compressor">
+				<p>コンプレッサー</p>
+				<img src="/img/Application/compressor.png">
+			</div>
+			<div class="pump">
+				<p>ポンプ</p>
+				<img src="/img/Application/pump.png">
+			</div>
+			<div class="autodoor">
+				<p>自動ドア</p>
+				<img src="/img/Application/autodoor.png">
+			</div>
+			<div class="blowermotor">
+				<p>ブロアモーター</p>
+				<img src="/img/Application/blowermotor.png">
+			</div>
+			<div class="crane">
+				<p>コンテナクレーン</p>
+				<img src="/img/Application/crane.png">
+			</div>
+			<div class="mixer">
+				<p>撹拌機</p>
+				<img src="/img/Application/mixer.png">
+			</div>
+			<div class="washingmachine">
+				<p>洗浄機</p>
+				<img src="/img/Application/washingmachine.png">
+			</div>
+		</div>
+
+		<!-- オプション -->
+		<div class="option_list" id="option_list">
+			<h2>
+				表示器を使用したシステム構成図
+			</h2>
+			<div class="balloon">
+				表示器を使用することで<br>
+				IRS9000シリーズ最大16台を一括監視
+			</div>
+			<div class="touchpanel">
+				<p>表示器(竹中電機専用ソフトインストール)</p>
+				<img src="/img/System/display.png">
+			</div>
+			<div class="controlpanel1">
+				<p>制御盤</p>
+				<img src="/img/System/controlpanel.png">
+			</div>
+			<div class="IRS1">
+				<p>IRS9000シリーズ</p>
+				<img src="/img/System/IRS.png">
+			</div>
+			<div class="controlpanel2">
+				<p>制御盤</p>
+				<img src="/img/System/controlpanel.png">
+			</div>
+			<div class="IRS2">
+				<p>IRS9000シリーズ</p>
+				<img src="/img/System/IRS.png">
+			</div>
+			<div class="comment1">
+				IRS9000シリーズ<br>最大16台接続可能
+			</div>
+			<div class="controlpanel3">
+				<p>制御盤</p>
+				<img src="/img/System/controlpanel.png">
+			</div>
+			<div class="IRS3">
+				<p>IRS9000シリーズ</p>
+				<img src="/img/System/IRS.png">
+			</div>
+			<div class="controlpanel4">
+				<p>制御盤</p>
+				<img src="/img/System/controlpanel.png">
+			</div>
+			<div class="IRS4">
+				<p>IRS9000シリーズ</p>
+				<img src="/img/System/IRS.png">
+			</div>
+		</div>
+
+		<!-- 運転準備ランプON時画像 -->
+		<div class="operation">
+			<p>運転準備 ON</p>
+			<img src="/img/operation.png">
+		</div>
+		<!-- 運転準備ランプOFF時画像 -->
+		<div class="operation_off">
+			<p>運転準備 OFF</p>
+			<img src="/img/operation_off.png">
+		</div>
+		<!-- 制御盤画像 -->
+		<div class="control_panel">
+			<p>制御盤</p>
+			<img src="/img/control_panel.png" alt="制御盤">
+		</div>
+		<!-- 制御盤とマグネット接続線 -->
+		<div class="c_line_fix1"></div>
+		<div class="c_line_fix2"></div>
+		<!-- マグネット画像1 -->
+		<div class="magnet1">
+			<p>マグネット</p>
+			<img src="/img/magnet.png">
+		</div>
+		
+		<!-- マグネットと漏電遮断器接続線 -->
+		<div class="m_line1_fix"></div>
+
+		<!-- 漏電遮断器1画像 -->
+		<div class="breaker">
+			<p>漏電遮断機</p>
+			<img src="/img/breaker.png">
+		</div>
+		
+		<!-- 漏電遮断器1とモーター1接続線 -->
+		<div class="b_line1_fix"></div>
+		<!-- 漏電遮断器1とIRS接続線 -->
+		<div class="round1"></div>
+		<div class="i_line1_fix1"></div>
+		<div class="i_line1_fix2"></div>
+		<!-- モーター1劣化前画像 -->
+		<div class="motor1_start">
+			<p>モーター 新品</p>
+			<img src="/img/gf.png" alt="動くモーター">
+		</div>
+		<!-- モーター1劣化後画像 -->
+		<div class="motor1_finish">
+			<p>モーター 劣化</p>
+			<img src="/img/gf_after.png" >
+		</div>
+		
+		<!-- モーター1とアース接続線 -->
+		<div class="e_line1_fix1"></div>
+		<div class="e_line1_fix2"></div>
+		<div class="e_line1_fix3"></div>
+		<div class="e_line1_fix4"></div>
+		<!-- IRS測定前画像 -->
+		<div class="IRS_start">
+			<img src="/img/IRS_start.png">
+		</div>
+		<!-- IRS測定後画像 -->
+		<div class="IRS_finish">
+			<img src="/img/IRS_finish.png" >
+		</div>
+		<!-- IRSとアース接続線 -->
+		<div class="e_line2_fix1"></div>
+		<div class="e_line2_fix2"></div>
+		<div class="e_line2_fix3"></div>
+		<div class="e_line2_fix4"></div>
+
+		<div class="display_start">
+			<!-- タッチパネル測定前 -->
+			<img src="/img/Display_start.png">
+		</div>
+		<div class="display_finish">
+			<!-- タッチパネル測定後 -->
+			<img src="/img/Display_finish.png">
+		</div>
+		<div class="display">
+			<!-- タッチパネル実物 -->
+			<img src="/img/Display.png" >
+		</div>
+
+		<div class="PC_start">
+			<!-- 集中管理システム測定前 -->
+			<img src="/img/PC_start.png">
+		</div>
+		<div class="PC_finish">
+			<!-- 集中管理システム測定前 -->
+			<img src="/img/PC_finish.png">
+		</div>
+		<!-- IRSと異常ランプ接続線 -->
+		
+		<div class="abnormal_lamp">
+			<!-- 異常ランプON時 -->
+			<img src="/img/operation.png">
+		</div>
+		<div class="abnormal_lamp_off">
+			<!-- 異常ランプOFF時 -->
+			<img src="/img/operation_off.png">
+		</div>
+		<div class="a_line_fix1"></div>
+
+	</div>
+
+</body>
+</html>
